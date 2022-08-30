@@ -9,7 +9,7 @@ timedatectl status
 #Partition Disks
 fdisk -l
 fdisk /dev/sda
-(echo "m"; echo "g"; echo "m"; echo "n"; echo "";  echo ""; echo "+3G"; echo "n"; echo "2"; echo ""; echo "+3G"; echo "n"; echo "3"; echo ""; echo ""; echo "m"; echo "t"; echo "1"; echo "1"; echo "t"; echo "2"; echo "19"; echo "m"; echo "w") | fdisk /dev/sda
+(echo -e "m"; echo -e "g"; echo -e "m"; echo -e "n"; echo -e "";  echo -e ""; echo -e "+3G"; echo -e "n"; echo -e "2"; echo -e ""; echo -e "+3G"; echo -e "n"; echo -e "3"; echo -e ""; echo -e ""; echo -e "m"; echo -e "t"; echo -e "1"; echo -e "1"; echo -e "t"; echo -e "2"; echo -e "19"; echo -e "m"; echo -e "w") | fdisk /dev/sda
 clear
 #Format 
 mkfs.fat -F32 /dev/sda1
